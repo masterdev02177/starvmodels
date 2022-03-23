@@ -54,13 +54,12 @@ export class Carousel extends React.Component {
     render() {
         return(
             <div id="carousel" className="noselect">
-                <div className="arrow arrow-left" onClick={this.leftClick}><i className="fi-arrow-left"></i></div>
+                <div className="arrow arrow-left" onClick={this.leftClick}><i class="fas fa-angle-left"></i></div>
                 <ReactCSSTransitionGroup 
                     transitionName={this.state.direction}>
                     {this.generateItems()}
                 </ReactCSSTransitionGroup>
-                <div className="arrow arrow-right" onClick={this.rightClick}><i className="fi-arrow-right"></i></div>
-                <div className="basedOn">Based on: <strong><a href="https://codepen.io/andyNroses/pen/KaENLb" target="_blank">andyNroses</a></strong></div>
+                <div className="arrow arrow-right" onClick={this.rightClick}><i className="fas fa-angle-right"></i></div>
             </div>
         )
     }
@@ -80,7 +79,8 @@ class Item extends React.Component {
         const image = 'url(' + this.props.id + ')';
         console.log('image: ', image);
         return(
-            <div className={className}
+            <div className={className}>
+                <div 
                 style={{
                     backgroundImage: image,
                     backgroundSize: "cover",
@@ -88,7 +88,26 @@ class Item extends React.Component {
                     backgroundPosition: "center center",
                 }}
                 >
+                </div>
+                <div className="details">
+                    <div className="title">
+                    <p className="nft">NFT Starving Model</p>
+                    <p className="colored-header">Price</p>
+                    </div>
+                    <div className="values">
+                    <p className="colored-header">0.01</p>
+                    <p className="colored-header">0.875</p>
+                    </div>
+                    <div className="icons">
+                    <img src="/images/diamond.png" alt="" style={{ width: "20px" }} />
+                    <div className="likes">
+                        <img src="/images/heart.png" alt="" />
+                        <span style={{ marginLeft: "0.5em" }}>100</span>
+                    </div>
+                    </div>
+                </div>
             </div>
+            
         )
     }
 }

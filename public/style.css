@@ -942,75 +942,7 @@ header {
 .navbar h1 {
     font-size: 1.7em;
 }
-@media screen and (max-width: 837px) {
-  .nav-items {
-    display: none;
-  }
-  .menu-icon {
-    display: inline-block;
-  }
-  .about-wrapper {
-    flex-wrap: wrap;
-    width: 90% !important;
-  }
-  .about-wrapper .image_wrapper {
-    width: 90%;
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .image_wrapper img {
-    width: 100% !important;
-    height: 400px !important;
-    align-items: center;
-  }
-  .image_wrapper .details {
-    flex-basis: 100%;
-  }
-  .details img {
-    width: 20px !important;
-    height: 20px !important;
-  }
-  .utilities-img {
-    pointer-events: none;
-    width: 100%;
-  }
-}
-@media screen and (max-width: 1274px) {
-  .utilities-container {
-    display: none !important;
-  }
-}
-@media screen and (max-width: 992px) {
-  .banner-text .title {
-    text-shadow: 0px 0px 4px #121111;
-    font-size: 42px !important;
-  }
-  .banner-text .sub-title {
-    font-size: 81px !important;
-  }
-}
-@media screen and (max-width: 768px) {
-  .banner-text .title {
-    text-shadow: 0px 0px 4px #121111;
-    font-size: 37px !important;
-  }
-  .banner-text .sub-title {
-    font-size: 76px !important;
-  }
-  .map_holder {
-    margin-top: 2rem;
-  }
-}
-@media screen and (max-width: 600px) {
-  .roadmap .container {
-    justify-content: center;
-  }
-}
-@media screen and (max-width: 612px) {
-  .map_holder {
-    margin-right: 0;
-  }
-}
+
 .about-wrapper {
   margin: auto;
   width: 80%;
@@ -1230,4 +1162,78 @@ header {
 }
 .content p {
   line-height: 30px;
+}
+
+@media screen and (max-width: 837px) {
+  .nav-items {
+    display: none;
+  }
+  .menu-icon {
+    display: inline-block;
+  }
+  .about-wrapper {
+    flex-wrap: wrap;
+    width: 90% !important;
+  }
+  .about-wrapper .image_wrapper {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .image_wrapper img {
+    max-width: 100% !important;
+    height: 400px !important;
+    align-items: center;
+    margin: auto;
+  }
+  .image_wrapper .details {
+    flex-basis: 100%;
+  }
+  .details img {
+    width: 20px !important;
+    height: 20px !important;
+  }
+  .utilities-img {
+    pointer-events: none;
+    width: 100%;
+  }
+  .about-wrapper {
+    padding: 3% 3% !important;
+  }
+}
+@media screen and (max-width: 1274px) {
+  .utilities-container {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 992px) {
+  .banner-text .title {
+    text-shadow: 0px 0px 4px #121111;
+    font-size: 42px !important;
+  }
+  .banner-text .sub-title {
+    font-size: 81px !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .banner-text .title {
+    text-shadow: 0px 0px 4px #121111;
+    font-size: 37px !important;
+  }
+  .banner-text .sub-title {
+    font-size: 76px !important;
+  }
+  .map_holder {
+    margin-top: 2rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .roadmap .container {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 612px) {
+  .map_holder {
+    margin-right: 0;
+  }
 }

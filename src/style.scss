@@ -1,11 +1,11 @@
 @import url( 'https://fonts.googleapis.com/css?family=Nunito');
 
-$default-height: 80%;
-$default-width: 18%;
-$level2-height: $default-height - 8%;
-$level2-width: $default-width - 8%;
-$level1-height: $default-height - 2%;
-$level1-width: $default-width - 2%;
+$default-height: 100%;
+$default-width: 19%;
+$level2-height: $default-height - 20%;
+$level2-width: $default-width - 0%;
+$level1-height: $default-height - 6%;
+$level1-width: $default-width + 2%;
 $level0-height: $default-height + 5%;
 $level0-width: $default-width + 5%;
 $level-2-left: 15%;
@@ -30,7 +30,8 @@ $level0-bs: 0 .4em .8em #212121;
 
 #carousel {
     height: 100%;
-    width: 100%;
+    width: 95%;
+    max-width: 1500px;
     margin: auto;
     left: 0;
     right: 0;
@@ -46,7 +47,6 @@ $level0-bs: 0 .4em .8em #212121;
     position: absolute;
     width: 60px;
     height: 40%;
-    background-color: #673AB7;
     text-align: center;
     font-size: 2em;
     cursor: pointer;
@@ -56,9 +56,10 @@ $level0-bs: 0 .4em .8em #212121;
     transform: translate(0, -50%);
     i {
       transform: translate(-50%, -50%);
-    //   top: 50%;
+      top: 50%;
       left: 50%;
       position: absolute;
+      color: #8523d3 !important;
     }
     transition: all 500ms;
     &-right {
@@ -69,8 +70,8 @@ $level0-bs: 0 .4em .8em #212121;
         left: 0;
     }
   &:hover{
-    background-color: #512DA8;
-    color: #FFEB3B;
+    color: #8e00ff !important;
+    font-size: 50px;
   }
 }
 
@@ -80,56 +81,113 @@ $level0-bs: 0 .4em .8em #212121;
     font-size: 40px;
     position: absolute;
     left: 50%;
+    background: #06041b;
+    background-image: -moz-linear-gradient(313deg, #31c6b45c 0%, #31c6b44f 10%, #31c6b44f 20%, #181442  60%);
+    background-image: -webkit-linear-gradient(313deg, #31c6b45c 0%, #31c6b44f 10%, #31c6b44f 20%, #181442 60%);
+    background-image: -ms-linear-gradient(313deg, #31c6b45c 0%, #31c6b44f 10%, #31c6b44f 20%, #181442 60%);
+    background-image: linear-gradient(313deg, #31c6b45c 0%, #31c6b44f 10%, #31c6b44f 20%, #181442 60%);
+    border-radius: 25px;
     // top: 50%;
     transform: translate(-50%, -50%);
     transition: box-shadow 1s,  height 250ms, width 250ms, left 1s, margin-top 1s, line-height 250ms, background-color 1s;
+    padding: 20px;
+}
+.item>div {
+    height: 75%;
+    border-radius: 15px;
+}
+.item>div.details {
+    height: 25%;
+    padding: 5px 2px;
+    width: auto;
+}
+.item>div.details>div {
+    margin: 0;
 }
 
+.level-1:after, .level-2:after, .level1:after, .level2:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #00000094;
+}
 .level-2 {
-    box-shadow: $level-2-bs;
     height: $level2-height;
     width: $level2-width;
     line-height: $level2-height;
-    background-color: #228291;
     left: $level-2-left;
 }
 
 .level-1 {
-    box-shadow: $level-1-bs;
     height: $level1-height;
     width: $level1-width;
     line-height: $level1-height;
-    background-color: #6796E5;
     left: $level-1-left;
 }
 
 .level0 {
-    box-shadow: $level0-bs;
     height: $level0-height;
     width: $level0-width;
     line-height: $level0-height;
-    background-color: #4EC9E1;
     left: $level0-left;
 }
 
 .level1 {
-    box-shadow: $level1-bs;
     height: $level1-height;
     width: $level1-width;
     line-height: $level1-height;
-    background-color: #6796E5;
     left: $level1-left;
 }
 
 .level2 {
-    box-shadow: $level2-bs;
     height: $level2-height;
     width: $level2-width;
     line-height: $level2-height;
-    background-color: #228291;
     left: $level2-left;
 }
-
+@media (max-width: 1500px) {
+    #carousel {
+        max-width: 90%;
+    }
+}
+@media (max-width: 1400px) {
+    .level0 {
+        width: 360px;
+    }
+    .level1, .level-1 {
+        width: 300px;
+    }
+    .level2, .level-2 {
+        width: 250px;
+    }
+}
+@media (max-width: 530px) {
+    .level1, .level-1 {
+        display: none;
+    }
+    .level2, .level-2 {
+        width: 250px;
+        display: none;
+    }
+    #carousel {
+        max-width: 95%;
+    }
+    .level0 {
+        width: 90%;
+    }
+    .arrow {
+        width: 20px;
+    }
+}
+@media (max-width: 370px) {
+    .level0{
+        height: 95%;
+    }
+}
 .level-2,
 .level2 {
     z-index: 0;
